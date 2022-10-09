@@ -22,7 +22,7 @@ export default {
     async getAllStarWars() {
       console.log('trying')
       try {
-        const res = await axios.get('https://starwarsapiv3.netlify.app/api/ships')
+        const res = await axios.get('https://pyvapi.netlify.app/api/ships')
         console.log(res.data)
         res.data.forEach((data) => {
           this.starwars.push({ ...data, tag: 'vic' })

@@ -20,7 +20,7 @@
                 we're trying to get all the starwars ship</p>
             <div class="example pa-2">
                 <p class="text-caption ma-0">
-                    http starwarsapiv3.netlify.app/api/ships
+                    http pyvapi.netlify.app/api/ships
                 </p>
             </div>
             <p class="text-caption pa-2 mt-1 mb-0">
@@ -62,7 +62,7 @@
 
             <div class="example pa-2">
                 <p class="text-caption ma-0">
-                    http starwarsapiv3.netlify.app/api/starwars/post
+                    http pyvapi.netlify.app/api/starwars/post
                 </p>
             </div>
             <p class="text-caption pa-2 mt-1 mb-0">
@@ -70,7 +70,7 @@
             </p>
             <div class="example pa-2">
                 <p class="text-caption ma-0">
-                    axios.post('https://starwarsapiv3.netlify.app/api/starwars/post', { <br>
+                    axios.post('https://pyvapi.netlify.app/api/starwars/post', { <br>
                     "requestToken": "0x00033849434893" `making post requires a secure connection` <br>
                     "dbname": "ships", <br> `indicates the database `
                     "title": "Battle gun g", <br> `title of the post`

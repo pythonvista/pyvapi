@@ -151,7 +151,7 @@ export default {
             if (this.dform.dbname && this.dform.title && this.dform.description && this.dform.shortDescription && this.dform.image) {
                 this.loading = true
                 try {
-                    let res = await axios.post('https://starwarsapiv3.netlify.app/api/post-starwars', this.dform)
+                    let res = await axios.post('https://pyvapi.netlify.app/api/post-starwars', this.dform)
                     console.log(res.data)
                     this.loading = false
                     this.snackbar = true

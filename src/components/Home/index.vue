@@ -5,23 +5,29 @@
         <img src="img/logo-main.png" alt="">
       </div>
       <div class="landing_text">
-        <h1>The Pyv API is the world's first quantified and programmatically-accessible 3D data source for all the data from the popular starwars characters and memes </h1>
-        <p class="caption px-2">We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
+        <h1>The Pyv API is the world's first quantified and programmatically-accessible 3D data source for all the data
+          from the popular starwars characters and memes </h1>
+        <p class="caption px-2">We've taken all the rich contextual stuff from the universe and formatted into something
+          easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
       </div>
-      <v-btn :to="{name: 'Api'}" color="black" class="white--text">GET STARTED</v-btn>
+      <div class="d-flex justify-center align-center btn_n">
+        <v-btn :to="{name: 'Api'}" color="black" class="white--text">GET STARTED</v-btn>
+        <v-btn :to="{name: 'Api'}" color="black" class="white--text">EXPLORE API</v-btn>
+      </div>
+     
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: "index"
+  name: "index"
 
 }
 </script>
 
 <style scoped>
-.hero_wrap{
+.hero_wrap {
   height: 89vh;
   /* border: 1px solid black; */
   display: flex;
@@ -31,17 +37,18 @@ export default {
   gap: 1rem;
 }
 
-.landing_logo{
+.landing_logo {
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.landing_logo img{
+
+.landing_logo img {
   width: 30%;
 }
 
-.landing_text{
+.landing_text {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -54,4 +61,32 @@ export default {
   gap: 0.5rem;
 }
 
+@media (max-width: 700px) {
+  .landing_logo img {
+    width: 60%;
+  }
+
+  .landing_logo {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing_text {
+  width: 80%;
+}
+.landing_text h1{
+  font-size: 1.3rem;
+}
+.landing_text p{
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.btn_n{
+  gap: 10px;
+}
+
+}
 </style>

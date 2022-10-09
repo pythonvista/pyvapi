@@ -2,8 +2,8 @@
     <div class="about-wrap">
         <p class="py-2 white--text text-h4 text-center" >About Pyvapi</p>
         <p class=" pa-3 caption white--text  text-center">
-            After hours of watching films and trawling through content online, we present to you all the People, Films,
-            Species, Starships, Vehicles and Planets from Star Wars. <br>
+            After hours of watching films and trawling through content online, we present to you all the People, Films, Memes
+            Species, Starships, Vehicles and Planets from Star Wars., which will offer 3D designs and for educational purposes <br>
             We've formatted this data in JSON and exposed it to you in a RESTish implementation that allows you to programmatically collect and measure the data. <br>
             Pyvapi was invented by Emeter Victor Tobiloba on the 7th of October 2022,
             Python V, who is a graduate of the University of Ekiti State, And have a Bsc in Computer

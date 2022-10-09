@@ -2,11 +2,11 @@
   <div>
     <div class="hero_wrap">
       <div class="landing_logo">
-        <img src="img/logo.png" alt="">
+        <img src="img/logo-main.png" alt="">
       </div>
       <div class="landing_text">
-        <h1>The Star Wars API is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe!</h1>
-        <p>We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
+        <h1>The Pyv API is the world's first quantified and programmatically-accessible 3D data source for all the data from the popular starwars characters and memes </h1>
+        <p class="caption px-2">We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
       </div>
       <v-btn :to="{name: 'Api'}" color="black" class="white--text">GET STARTED</v-btn>
     </div>

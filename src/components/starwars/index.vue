@@ -120,13 +120,13 @@ export default {
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        height: 100vh;
+        height: auto;
         background-position: center, center;
         background-size: cover;
     }
 
     .sketchfab-embed-wrapper {
-        height: 40%;
+        height: 40vh;
         width: 100%;
         background: rgba(38, 38, 38, 0.765);
         backdrop-filter: blur(3px);
@@ -134,7 +134,7 @@ export default {
     .sketchfab-content {
     background: rgba(38, 38, 38, 0.765);
     backdrop-filter: blur(3px);
-    height: 60%;
+    height: 60vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -156,7 +156,7 @@ export default {
     border-right: 3px solid;
     font-family: monospace;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 }

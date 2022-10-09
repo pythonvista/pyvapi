@@ -61,6 +61,10 @@ export default {
   gap: 0.5rem;
 }
 
+.btn_n{
+  gap: 10px;
+}
+
 @media (max-width: 700px) {
   .landing_logo img {
     width: 60%;

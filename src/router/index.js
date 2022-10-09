@@ -3,6 +3,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
+import StarWarsView from '../views/StarWarsView.vue';
 
 Vue.use(VueRouter)
 
@@ -47,6 +48,21 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "profile" */ '@/components/Home/post'),
       }
+    ]
+  },
+  {
+    path: '/',
+    alias: '/starwars',
+    component: StarWarsView,
+    children:[
+      {
+        path: '/starwars', // default view
+        name: 'Starwars',
+        // meta: { requiresAuth: true },
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '@/components/starwars/index'),
+      },
+      
     ]
   },
 

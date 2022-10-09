@@ -157,6 +157,7 @@ export default {
                     this.loading = false
                     this.snackbar = true
                     this.snacktext = res.data.msg
+                    this.dform= {}
                     // this.loading = false
                 } catch (err) {
                     console.log(err)

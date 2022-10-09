@@ -1,18 +1,47 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <navbar />
+    <div class="homeviews">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+const axios = require('axios').default;
+import navbar from '@/components/navs/navbar.vue'
 export default {
-  name: 'HomeView',
+  name: 'Home',
   components: {
-    HelloWorld
+    navbar,
+  },
+  data: () => ({
+    starwars: []
+  }),
+  methods: {
+    async getAllStarWars() {
+      console.log('trying')
+      try {
+        const res = await axios.get('https://starwarsapiv3.netlify.app/api/ships')
+        console.log(res.data)
+        res.data.forEach((data) => {
+          this.starwars.push({ ...data, tag: 'vic' })
+        })
+
+      } catch (err) {
+        console.log(err)
+      }
+
+    }
+  },
+  created() {
+    this.getAllStarWars()
   }
+
+
+
 }
 </script>
+
+<style scoped>
+</style>

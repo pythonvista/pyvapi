@@ -41,15 +41,16 @@
                     [ <br>
                     {
                     "description":"String","title":"Magmus
-                    4","shortDescrption":"this is the magmus
-                    2","image":"String","id":"FtfSHkJMs4aGqcuSwVW4"
+                    4", <br> "shortDescrption":"this is the magmus
+                    2","image":"String", <br> "id":"FtfSHkJMs4aGqcuSwVW4"
 
                     },<br>
                     {"shortDescrption":"this is the magmus
-                    2","image":"String","title":"Magmus","description":"String","id":"PeJPpOkU0NbL3bFMQXOI"}, <br>
+                    2", <br> "image":"String","title":"Magmus","description":"String", <br> "id":"PeJPpOkU0NbL3bFMQXOI"}, <br>
                     {"title":"Battle
                     gun g","shortDescrption":"this is the magmus
-                    2t","image":"String","description":"String","id":"iX9cph9W3lSP6zwB9nk7"},
+                    2t","image":"String", 
+                <br> "description":"String","id":"iX9cph9W3lSP6zwB9nk7"},
                     <br>{"shortDescrption":"this is
                     the magmus 2","image":"String","description":"String","title":"Magmus
                     2","id":"qNS84cr5IgP9apHpYC65"} <br> ]
@@ -96,8 +97,8 @@
 
                 </p>
             </div>
-            <div class="doc-post example pa-2 my-2 d-flex justify-center align-center">
-                <v-btn block class="ma-2 " outlined color="indigo">
+            <div class="doc-post example px-3 py-2 my-2  d-flex justify-center align-center">
+                <v-btn  class="mx-4 red--text" outlined >
                     Request Authorization To Make A Post
                 </v-btn>
             </div>
@@ -133,8 +134,13 @@ export default {
 
 .doc-post {
     color: rgb(0, 0, 0) !important;
-    background-color: #ffffff;
+    background-color: transparent;
     font-weight: 500;
     border-radius: 8px;
+    overflow: hidden;
+}
+
+.doc-started, .example{
+overflow:  hidden;
 }
 </style>

@@ -88,7 +88,7 @@ export default {
                                 if (userauth == sha1(requestToken)) {
                                     this.authform = false
                                     this.postform = true
-                                    
+
                                 } else {
                                     this.authform = false
                                     this.otpform = true
@@ -111,8 +111,9 @@ export default {
                     }
                     this.loading = false
                 } catch (err) {
-                    console.log(err)
                     this.loading = false
+                    this.snackbar = true
+                    this.snacktext = err.msg
                 }
 
 
@@ -269,5 +270,18 @@ export default {
     padding: 0.5em 1em;
     width: 100%;
     outline: none;
+}
+
+@media (max-width: 700px) {
+    .form-wrap {
+        width: 90%;
+
+        align-items: center;
+    }
+
+    .auth-form {
+        width: 100%;
+    }
+
 }
 </style>

@@ -148,5 +148,16 @@ export default {
     height: 90%;
 }
 
+.typing-demo {
+    width: 100%;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    text-align: center;
+    font-size: 1em;
+}
+
 }
 </style>

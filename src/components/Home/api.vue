@@ -20,7 +20,7 @@
                 </div>
                 <div class="d-flex justify-center align-center api-btn">
                     <v-btn :to="{name: 'Docs'}" depressed color="black" class="white--text"  x-small>Api Docs</v-btn>
-                    <v-btn depressed color="black" class="white--text" x-small>Explore Api</v-btn>
+                    <v-btn :to="{name: 'Starwars'}" depressed color="black" class="white--text" x-small>Explore App</v-btn>
                 </div>
 
             </v-card>

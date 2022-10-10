@@ -11,7 +11,7 @@
           easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
       </div>
       <div class="d-flex justify-center align-center btn_n">
-        <v-btn :to="{name: 'Api'}" color="black" class="white--text">GET STARTED</v-btn>
+        <v-btn :to="{name: 'Docs'}" color="black" class="white--text">GET STARTED</v-btn>
         <v-btn :to="{name: 'Api'}" color="black" class="white--text">EXPLORE API</v-btn>
       </div>
      

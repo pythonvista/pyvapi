@@ -2,29 +2,63 @@
     <div class="wrap" style="background:url('img/bg.jpg');">
         <div class="sketchfab-embed-wrapper"> <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
                 webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
-                execution-while-out-of-viewport execution-while-not-rendered web-share :src="url">
+                execution-while-out-of-viewport execution-while-not-rendered web-share :src="selected.image+'?autospin=1&autostart=1'">
             </iframe>
         </div>
         <div class="sketchfab-content">
             <div class="content-wrap pa-2 white--text">
-                <p class="typing-demo text-center ma-0 ">HAN SOLO'S LANDSPEEDER</p>
-                <p class=" text-center white--text font-italic">A ground transportation vehicle capable of hovering
-                    slightly that enabled transit at relatively high speeds.</p>
-                <p class="text-caption white--text">Han Solo acquired an overpowered Mobquet M-68 landspeeder under
-                    circumstances he doesn’t care to explain. The M-68 is a favorite of Corellian speeder enthusiasts,
-                    as its repulsorlift generator is easily modified and overcharged. Han has decorated the speeder’s
-                    windshield with a lucky charm – a pair of chance cubes used in sabacc games.</p>
+                <p class="typing-demo text-center ma-0 ">{{selected.title}}</p>
+                <p class=" text-center white--text font-italic">{{selected.shortDescription}}</p>
+                <p class="text-caption des white--text">{{selected.description}}</p>
             </div>
+            <v-btn outlined class="mt-2 white--text" @click="shuffleSelected">Shuffle</v-btn>
         </div>
     </div>
 </template>
 
 <script>
+const axios = require('axios').default;
 export default {
     name: "index",
     data: () => ({
-        url: "https://sketchfab.com/models/41457c00da15427ab697d83f82e0dc04/embed?autospin=1&autostart=1"
-    })
+        url: "https://sketchfab.com/models/41457c00da15427ab697d83f82e0dc04/embed?autospin=1&autostart=1",
+        starwarsShip: [],
+        selected: {},
+        counter:0
+
+    }),
+    created(){
+        this.getAllStarWars();
+
+    },
+    methods: {
+        async getAllStarWars() {
+            try {
+                const res = await axios.get('https://pyvapi.netlify.app/api/ships')
+                console.log(res.data)
+                this.starwarsShip = res.data
+                this.selected = this.starwarsShip[0]
+
+            } catch (err) {
+                console.log(err)
+            }
+        },
+        shuffleSelected(){
+            if(this.counter == this.starwarsShip.length){
+                this.counter = 0
+                this.selected = this.starwarsShip[this.counter]
+            }else{
+                this.counter += 1
+                this.selected = this.starwarsShip[this.counter]
+            }
+            
+        }
+    },
+    computed:{
+        fire(){
+            return this.counter
+        }     
+    }
 
 }
 </script>
@@ -131,33 +165,36 @@ export default {
         background: rgba(38, 38, 38, 0.765);
         backdrop-filter: blur(3px);
     }
+
     .sketchfab-content {
-    background: rgba(38, 38, 38, 0.765);
-    backdrop-filter: blur(3px);
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        background: rgba(38, 38, 38, 0.765);
+        backdrop-filter: blur(3px);
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.content-wrap {
-    width: 90%;
-    height: 90%;
-}
+    .content-wrap {
+        width: 90%;
+        height: 90%;
+    }
 
-.typing-demo {
-    width: 100%;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: monospace;
-    text-align: center;
-    font-size: 1.2em;
-}
+    .typing-demo {
+        width: 100%;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .dis {}
 
 }
 </style>

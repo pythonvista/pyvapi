@@ -11,7 +11,7 @@
                 <p class=" text-center white--text font-italic">{{selected.shortDescription}}</p>
                 <p class="text-caption des white--text">{{selected.description}}</p>
             </div>
-            <v-btn outlined class="mt-2 white--text" @click="shuffleSelected">Shuffle</v-btn>
+            <v-btn outlined class="mt-2 mb-2 white--text" @click="shuffleSelected">Shuffle</v-btn>
         </div>
 
         <v-btn :to="{name: 'Home'}" class="home" fab small outlined color="red"><v-icon>mdi-home</v-icon></v-btn>

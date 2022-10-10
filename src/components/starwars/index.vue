@@ -169,7 +169,8 @@ export default {
     .sketchfab-content {
         background: rgba(38, 38, 38, 0.765);
         backdrop-filter: blur(3px);
-        height: 60vh;
+       min-height: 50vh;
+       
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -181,6 +182,7 @@ export default {
     .content-wrap {
         width: 90%;
         height: 90%;
+        margin:1em 0 ;
     }
 
     .typing-demo {
